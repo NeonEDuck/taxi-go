@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Taipei MRT Taxi Go</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="cancel">Cancel</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm">Confirm</string>
+    <string name="select_car_type">Select Car Type</string>
+    <string name="account">Account:</string>
+    <string name="normal_taxi">Normal Taxi\nRight-on-time Calling</string>
+    <string name="accessibility_taxi">Accessibility Taxi\nBooking Service</string>
+    <string name="check_list">[Check the info list below]\n\nDeparture Time and Arrive Time\nCar Type and Car infomation\nNotification Setting</string>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">北捷Taxi Go</string>
+    <string name="login">登入</string>
+    <string name="register">註冊</string>
+    <string name="cancel">取消</string>
+    <string name="first_name">姓氏</string>
+    <string name="last_name">名字</string>
+    <string name="email">Email</string>
+    <string name="password">密碼</string>
+    <string name="confirm">確認密碼</string>
+    <string name="select_car_type">選擇車種</string>
+    <string name="account">會員帳號：</string>
+    <string name="normal_taxi">一般計程車\n及時叫車</string>
+    <string name="accessibility_taxi">無障礙通行車\n預約服務</string>
+    <string name="check_list">[確認以下資訊]\n\n出發、抵達時間\n車種、車號資訊\n安心通知設定</string>
+</resources>
