@@ -13,4 +13,10 @@
     <string name="normal_taxi">Normal Taxi\nRight-on-time Calling</string>
     <string name="accessibility_taxi">Accessibility Taxi\nBooking Service</string>
     <string name="check_list">[Check the info list below]\n\nDeparture Time and Arrive Time\nCar Type and Car infomation\nNotification Setting</string>
+    <string name="placeholder_destination">Select Destination</string>
+    <string name="placeholder_origin">Select Origin</string>
+    <string name="station_taipei_station">Taipei Main Station</string>
+    <string name="station_xinsheng">Zhongxiao XInsheng</string>
+    <string name="minute">minute</string>
+    <string name="order">Order</string>
 </resources>

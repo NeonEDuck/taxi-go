@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TaxiGO">
         <activity
+            android:name=".OrderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MrtActivity"
+            android:exported="false" />
+        <activity
             android:name=".SelectActivity"
             android:exported="false" />
         <activity

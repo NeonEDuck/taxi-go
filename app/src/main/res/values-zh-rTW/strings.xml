@@ -14,4 +14,10 @@
     <string name="normal_taxi">一般計程車\n及時叫車</string>
     <string name="accessibility_taxi">無障礙通行車\n預約服務</string>
     <string name="check_list">[確認以下資訊]\n\n出發、抵達時間\n車種、車號資訊\n安心通知設定</string>
+    <string name="placeholder_destination">選擇目的地</string>
+    <string name="placeholder_origin">選擇出發點</string>
+    <string name="station_xinsheng">忠孝新生</string>
+    <string name="station_taipei_station">台北車站</string>
+    <string name="minute">分鐘</string>
+    <string name="order">預約</string>
 </resources>
