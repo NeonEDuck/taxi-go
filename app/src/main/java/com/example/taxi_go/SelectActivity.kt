@@ -15,5 +15,10 @@ class SelectActivity : AppCompatActivity() {
             intent = Intent(this, MrtActivity::class.java)
             startActivity(intent)
         }
+
+        views.btnAccessibility.setOnClickListener {
+            intent = Intent(this, MrtActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
