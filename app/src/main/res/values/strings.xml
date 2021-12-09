@@ -16,7 +16,8 @@
     <string name="placeholder_destination">Select Destination</string>
     <string name="placeholder_origin">Select Origin</string>
     <string name="station_taipei_station">Taipei Main Station</string>
-    <string name="station_xinsheng">Zhongxiao XInsheng</string>
+    <string name="station_xinsheng">Zhongxiao Xinsheng</string>
     <string name="minute">minute</string>
     <string name="order">Order</string>
+    <string name="select_station">Select the stations</string>
 </resources>

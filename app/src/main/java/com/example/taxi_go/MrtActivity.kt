@@ -3,12 +3,17 @@ package com.example.taxi_go
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.Button
 import android.widget.LinearLayout
 import com.example.taxi_go.databinding.ActivityMrtBinding
+import androidx.core.app.NavUtils
+
+
+
 
 const val ORIGIN_ID = "originId"
-const val DESTINATION_ID = "distinationId"
+const val DESTINATION_ID = "destinationId"
 
 class MrtActivity : AppCompatActivity() {
     enum class Options {
@@ -20,6 +25,8 @@ class MrtActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val views = ActivityMrtBinding.inflate(layoutInflater)
         setContentView(views.root)
+        setSupportActionBar(views.toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val btnList = mapOf<Button, Int>(
             views.btnTaipeiStation  to R.string.station_taipei_station,
@@ -71,6 +78,17 @@ class MrtActivity : AppCompatActivity() {
                 startActivity(intent)
             }
         }
+    }
+
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            android.R.id.home -> {
+                finish()
+                return true
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 
     private fun changeStyleOf(layout: LinearLayout, active: Boolean) {

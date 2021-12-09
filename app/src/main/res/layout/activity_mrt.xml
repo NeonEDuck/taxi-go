@@ -5,136 +5,150 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MrtActivity">
-
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
-        <HorizontalScrollView
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <ScrollView
+
+            <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-                    <RelativeLayout
-                        android:id="@+id/linearLayout"
-                        android:layout_width="3840px"
-                        android:layout_height="5144px"
-                        android:background="@drawable/mrt_map">
+                        <RelativeLayout
+                            android:id="@+id/linearLayout"
+                            android:layout_width="3840px"
+                            android:layout_height="5144px"
+                            android:background="@drawable/mrt_map">
 
-                        <Button
-                            android:id="@+id/btnTaipeiStation"
-                            android:layout_width="140px"
-                            android:layout_height="140px"
-                            android:layout_marginLeft="1500px"
-                            android:layout_marginTop="2930px"
-                            android:background="#6600ff00"/>
+                            <Button
+                                android:id="@+id/btnTaipeiStation"
+                                android:layout_width="140px"
+                                android:layout_height="140px"
+                                android:layout_marginLeft="1500px"
+                                android:layout_marginTop="2930px"
+                                android:background="#6600ff00"/>
 
-                        <Button
-                            android:id="@+id/btnXinsheng"
-                            android:layout_width="140px"
-                            android:layout_height="140px"
-                            android:layout_marginLeft="1800px"
-                            android:layout_marginTop="2930px"
-                            android:background="#6600ff00"/>
+                            <Button
+                                android:id="@+id/btnXinsheng"
+                                android:layout_width="140px"
+                                android:layout_height="140px"
+                                android:layout_marginLeft="1800px"
+                                android:layout_marginTop="2930px"
+                                android:background="#6600ff00"/>
 
-                    </RelativeLayout>
+                        </RelativeLayout>
 
-            </ScrollView>
-        </HorizontalScrollView>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_margin="16dp"
-            android:layout_alignParentBottom="true"
-            android:clipToPadding="false"
-            android:padding="8dp"
-            android:elevation="20dp"
-            android:background="@drawable/rounded_panel_16">
+                </ScrollView>
+            </HorizontalScrollView>
 
             <LinearLayout
-                android:id="@+id/lahOrigin"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="16dp"
+                android:layout_alignParentBottom="true"
+                android:clipToPadding="false"
+                android:padding="8dp"
+                android:elevation="20dp"
                 android:background="@drawable/rounded_panel_16">
 
-                <ImageView
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:src="@drawable/ic_launcher_foreground" />
-
-<!--                <TextView-->
-<!--                    android:layout_width="100dp"-->
-<!--                    android:layout_height="16sp"-->
-<!--                    android:gravity="center|start"-->
-<!--                    android:text="@string/origin"/>-->
-
-                <TextView
-                    android:id="@+id/txvOrigin"
+                <LinearLayout
+                    android:id="@+id/lahOrigin"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center|start"
-                    android:text="@string/placeholder_origin"/>
+                    android:layout_height="48dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/rounded_panel_16">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_launcher_foreground" />
+
+    <!--                <TextView-->
+    <!--                    android:layout_width="100dp"-->
+    <!--                    android:layout_height="16sp"-->
+    <!--                    android:gravity="center|start"-->
+    <!--                    android:text="@string/origin"/>-->
+
+                    <TextView
+                        android:id="@+id/txvOrigin"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center|start"
+                        android:text="@string/placeholder_origin"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lahDestination"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/rounded_panel_16">
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_launcher_foreground"/>
+
+    <!--                <TextView-->
+    <!--                    android:layout_width="100dp"-->
+    <!--                    android:layout_height="match_parent"-->
+    <!--                    android:gravity="center|start"-->
+    <!--                    android:text="@string/destination"/>-->
+
+                    <TextView
+                        android:id="@+id/txvDestination"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center|start"
+                        android:text="@string/placeholder_destination"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lahAction"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal"
+                    android:layoutDirection="rtl"
+                    android:background="@drawable/rounded_panel_16">
+
+                    <Button
+                        android:id="@+id/btnConfirm"
+                        android:layout_width="wrap_content"
+                        android:paddingHorizontal="16sp"
+                        android:layout_height="48dp"
+                        android:background="@drawable/rounded_button"
+                        android:textSize="16sp"
+                        android:text="@string/order"/>
+
+                    <TextView
+                        android:id="@+id/txvTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center|start"
+                        android:layout_marginEnd="48dp"/>
+
+                </LinearLayout>
 
             </LinearLayout>
-            
-            <LinearLayout
-                android:id="@+id/lahDestination"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:orientation="horizontal"
-                android:background="@drawable/rounded_panel_16">
-                <ImageView
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:src="@drawable/ic_launcher_foreground"/>
+        </RelativeLayout>
 
-<!--                <TextView-->
-<!--                    android:layout_width="100dp"-->
-<!--                    android:layout_height="match_parent"-->
-<!--                    android:gravity="center|start"-->
-<!--                    android:text="@string/destination"/>-->
-
-                <TextView
-                    android:id="@+id/txvDestination"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center|start"
-                    android:text="@string/placeholder_destination"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/lahAction"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:orientation="horizontal"
-                android:layoutDirection="rtl"
-                android:background="@drawable/rounded_panel_16">
-
-                <Button
-                    android:id="@+id/btnConfirm"
-                    android:layout_width="wrap_content"
-                    android:paddingHorizontal="16sp"
-                    android:layout_height="48dp"
-                    android:background="@drawable/rounded_button"
-                    android:textSize="16sp"
-                    android:text="@string/order"/>
-
-                <TextView
-                    android:id="@+id/txvTime"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center|start"
-                    android:layout_marginEnd="48dp"/>
-
-            </LinearLayout>
-
-        </LinearLayout>
-    </RelativeLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
