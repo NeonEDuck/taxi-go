@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TaxiGO">
         <activity
-            android:name=".OrderActivity"
+            android:name=".TimeActivity"
             android:exported="false" />
         <activity
             android:name=".MrtActivity"
