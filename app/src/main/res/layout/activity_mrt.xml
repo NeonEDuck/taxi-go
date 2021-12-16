@@ -9,14 +9,21 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            android:elevation="4dp"
-            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+            android:layout_height="64dp"
+            android:gravity="start|center"
+            android:paddingHorizontal="16dp"
+            android:background="?attr/colorPrimary">
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_big_arrow"
+                android:rotation="90"
+                app:tint="@color/white"/>
+        </LinearLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -79,12 +86,6 @@
                         android:layout_height="48dp"
                         android:src="@drawable/ic_launcher_foreground" />
 
-    <!--                <TextView-->
-    <!--                    android:layout_width="100dp"-->
-    <!--                    android:layout_height="16sp"-->
-    <!--                    android:gravity="center|start"-->
-    <!--                    android:text="@string/origin"/>-->
-
                     <TextView
                         android:id="@+id/txvOrigin"
                         android:layout_width="match_parent"
@@ -93,6 +94,10 @@
                         android:text="@string/placeholder_origin"/>
 
                 </LinearLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"/>
 
                 <LinearLayout
                     android:id="@+id/lahDestination"
@@ -105,12 +110,6 @@
                         android:layout_height="48dp"
                         android:src="@drawable/ic_launcher_foreground"/>
 
-    <!--                <TextView-->
-    <!--                    android:layout_width="100dp"-->
-    <!--                    android:layout_height="match_parent"-->
-    <!--                    android:gravity="center|start"-->
-    <!--                    android:text="@string/destination"/>-->
-
                     <TextView
                         android:id="@+id/txvDestination"
                         android:layout_width="match_parent"
@@ -119,6 +118,10 @@
                         android:text="@string/placeholder_destination"/>
 
                 </LinearLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"/>
 
                 <LinearLayout
                     android:id="@+id/lahAction"

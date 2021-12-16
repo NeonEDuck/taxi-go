@@ -8,7 +8,7 @@
     <string name="last_name">名字</string>
     <string name="email">Email</string>
     <string name="password">密碼</string>
-    <string name="confirm">確認密碼</string>
+    <string name="confirm_password">確認密碼</string>
     <string name="select_car_type">選擇車種</string>
     <string name="account">會員帳號：</string>
     <string name="normal_taxi">一般計程車\n及時叫車</string>
@@ -20,5 +20,12 @@
     <string name="station_taipei_station">台北車站</string>
     <string name="minute">分鐘</string>
     <string name="order">預約</string>
+    <string name="hour">小時</string>
+    <string name="month">月份</string>
+    <string name="day">日期</string>
+    <string name="year">年份</string>
+    <string name="mrt_time">搭乘MRT時間</string>
+    <string name="taxi_time">搭乘計程車時間</string>
+    <string name="confirm">確認</string>
     <string name="select_station">選擇車站</string>
 </resources>

@@ -14,6 +14,7 @@ import androidx.core.app.NavUtils
 
 const val ORIGIN_ID = "originId"
 const val DESTINATION_ID = "destinationId"
+const val INTERVAL_ID = "intervalId"
 
 class MrtActivity : AppCompatActivity() {
     enum class Options {
@@ -25,7 +26,6 @@ class MrtActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val views = ActivityMrtBinding.inflate(layoutInflater)
         setContentView(views.root)
-        setSupportActionBar(views.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val btnList = mapOf<Button, Int>(
@@ -35,8 +35,14 @@ class MrtActivity : AppCompatActivity() {
         var curOrigin: Int? = null
         var curDestination: Int? = null
         var curOption = Options.Origin
+        var interval: Int = 0
 
+        changeStyleOf(views.btnConfirm, false)
         changeStyleOf(views.lahOrigin, true)
+
+        views.btnBack.setOnClickListener {
+            finish()
+        }
 
         views.lahOrigin.setOnClickListener {
             curOption = Options.Origin
@@ -62,33 +68,24 @@ class MrtActivity : AppCompatActivity() {
                 }
 
                 if (curOrigin != null && curDestination != null) {
-                    val time = calculateTimeBetween(curOrigin!!, curDestination!!)
-                    val text = "$time ${resources.getString(R.string.minute)}"
+                    interval = calculateTimeBetween(curOrigin!!, curDestination!!)
+                    val text = "$interval ${resources.getString(R.string.minute)}"
                     views.txvTime.text = text
+                    changeStyleOf(views.btnConfirm, true)
                 }
             }
         }
 
         views.btnConfirm.setOnClickListener {
             if (curOrigin != null && curDestination != null) {
-                val intent = Intent(this, OrderActivity::class.java).apply {
+                val intent = Intent(this, TimeActivity::class.java).apply {
                     putExtra(ORIGIN_ID, curOrigin)
                     putExtra(DESTINATION_ID, curDestination)
+                    putExtra(INTERVAL_ID, interval)
                 }
                 startActivity(intent)
             }
         }
-    }
-
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            android.R.id.home -> {
-                finish()
-                return true
-            }
-        }
-        return super.onOptionsItemSelected(item)
     }
 
     private fun changeStyleOf(layout: LinearLayout, active: Boolean) {
@@ -99,6 +96,15 @@ class MrtActivity : AppCompatActivity() {
         else {
             layout.backgroundTintList = resources.getColorStateList(R.color.white, this.theme)
             layout.elevation = 0f
+        }
+    }
+
+    private fun changeStyleOf(btn: Button, active: Boolean) {
+        if (active) {
+            btn.backgroundTintList = resources.getColorStateList(R.color.yellow_200, this.theme)
+        }
+        else {
+            btn.backgroundTintList = resources.getColorStateList(R.color.gray, this.theme)
         }
     }
 

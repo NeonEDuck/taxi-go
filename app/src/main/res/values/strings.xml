@@ -7,7 +7,7 @@
     <string name="last_name">Last Name</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
-    <string name="confirm">Confirm</string>
+    <string name="confirm_password">Confirm</string>
     <string name="select_car_type">Select Car Type</string>
     <string name="account">Account:</string>
     <string name="normal_taxi">Normal Taxi\nRight-on-time Calling</string>
@@ -19,5 +19,12 @@
     <string name="station_xinsheng">Zhongxiao Xinsheng</string>
     <string name="minute">minute</string>
     <string name="order">Order</string>
+    <string name="hour">hour</string>
+    <string name="month">month</string>
+    <string name="day">day</string>
+    <string name="year">year</string>
+    <string name="mrt_time">Time of getting on MRT</string>
+    <string name="taxi_time">Time of getting on taxi</string>
+    <string name="confirm">Confirm</string>
     <string name="select_station">Select the stations</string>
 </resources>
