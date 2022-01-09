@@ -11,8 +11,16 @@ class SelectActivity : AppCompatActivity() {
         val views = ActivitySelectBinding.inflate(layoutInflater)
         setContentView(views.root)
 
-        views.btnNormal.setOnClickListener {
-            intent = Intent(this, MrtActivity::class.java)
+        views.txvAccount.text = Storage.account
+        views.txvMemberName.text = "陳阿罵"
+
+        views.profilePicture.setOnClickListener {
+            intent = Intent(this, SettingsActivity::class.java)
+            startActivity(intent)
+        }
+
+            views.btnNormal.setOnClickListener {
+            intent = Intent(this, MrtNormalActivity::class.java)
             startActivity(intent)
         }
 

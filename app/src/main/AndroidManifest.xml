@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Main">
         <activity
+            android:name=".ResultNormalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MrtNormalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false" />
+        <activity
             android:name=".TimeActivity"
             android:exported="false" />
         <activity

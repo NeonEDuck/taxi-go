@@ -11,8 +11,7 @@
     <string name="select_car_type">Select Car Type</string>
     <string name="account">Account:</string>
     <string name="normal_taxi">Normal Taxi\nRight-on-time Calling</string>
-    <string name="accessibility_taxi">Accessibility Taxi\nBooking Service</string>
-    <string name="check_list">[Check the info list below]\n\nDeparture Time and Arrive Time\nCar Type and Car infomation\nNotification Setting</string>
+    <string name="accessibility_taxi">Accessibility Taxi\nReservation Service</string>
     <string name="placeholder_destination">Select Destination</string>
     <string name="placeholder_origin">Select Origin</string>
     <string name="station_taipei_station">Taipei Main Station</string>
@@ -27,4 +26,14 @@
     <string name="taxi_time">Time of getting on taxi</string>
     <string name="confirm">Confirm</string>
     <string name="select_station">Select the stations</string>
+    <string name="notification_mrt">Remind you 30 minutes before riding MRT</string>
+    <string name="notification_taxi">Send a notification when Taxi arrivied</string>
+    <string name="reservation">Reservation List</string>
+    <string name="reservation_success">Reservation Success</string>
+    <string name="notification_on_taxi">Send a notification when customer is on the Taxi</string>
+    <string name="notification_taxi_before">Send a notification when Taxi is about to arrived</string>
+    <string name="placeholder_station">Select Station</string>
+    <string name="call">Call</string>
+    <string name="call_success">Call success</string>
+    <string name="taxi_plate">Taxi plate number</string>
 </resources>

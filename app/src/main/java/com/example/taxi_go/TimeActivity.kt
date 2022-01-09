@@ -2,6 +2,7 @@ package com.example.taxi_go
 
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.DatePicker
@@ -41,7 +42,7 @@ class TimeActivity : AppCompatActivity() {
         views.lahDatePicker.setOnClickListener {
             val datePicker = DatePickerDialog(this, DatePickerDialog.OnDateSetListener { _, year, month, dayOfMonth ->
                 this.year = year
-                this.month = month
+                this.month = month+1
                 this.day = dayOfMonth
                 updateTime()
             }, year, month, day)
@@ -70,6 +71,24 @@ class TimeActivity : AppCompatActivity() {
 
             timePicker.show()
         }
+
+        views.btnConfirm.setOnClickListener {
+            if (year != 0) {
+                val timeAfter = hour * 60 + minute + interval
+                val intent = Intent(this, ResultActivity::class.java).apply {
+                    putExtra(ORIGIN_ID, originId)
+                    putExtra(DESTINATION_ID, destinationId)
+                    putExtra(DATE_ID, "${padTime(year)}/${padTime(month)}/${padTime(day)}")
+                    putExtra(TIME_BEFORE_ID, "${padTime(hour)}${resources.getString(R.string.hour)} ${padTime(minute)}${resources.getString(R.string.minute)}")
+                    putExtra(TIME_AFTER_ID, "${padTime(timeAfter/60)}${resources.getString(R.string.hour)} ${padTime(timeAfter%60)}${resources.getString(R.string.minute)}")
+                }
+                startActivity(intent)
+            }
+        }
+    }
+
+    private fun padTime(num: Int): String {
+        return num.toString().padStart(2, '0')
     }
 
     private fun updateTime() {

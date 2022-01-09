@@ -15,11 +15,11 @@ class RegisterActivity : AppCompatActivity() {
         setContentView(views.root)
 
         val edtList = mapOf<EditText, TextView>(
-            views.edtFirstName  to views.hitFirstName,
-            views.edtLastName   to views.hitLastName,
-            views.edtEmail      to views.hitEmail,
-            views.edtPassword   to views.hitPassword,
-            views.edtPassword2  to views.hitPassword2,
+//            views.edtFirstName  to views.hitFirstName,
+//            views.edtLastName   to views.hitLastName,
+//            views.edtEmail      to views.hitEmail,
+//            views.edtPassword   to views.hitPassword,
+//            views.edtPassword2  to views.hitPassword2,
         )
 
         views.btnRegister.setOnClickListener {

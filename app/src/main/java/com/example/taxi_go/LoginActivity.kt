@@ -8,6 +8,8 @@ import android.widget.TextView
 import com.example.taxi_go.databinding.ActivityLoginBinding
 import com.example.taxi_go.databinding.ActivityRegisterBinding
 
+const val ACCOUNT_ID = "accountId"
+
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -15,8 +17,8 @@ class LoginActivity : AppCompatActivity() {
         setContentView(views.root)
 
         val edtList = mapOf<EditText, TextView>(
-            views.edtEmail      to views.hitEmail,
-            views.edtPassword   to views.hitPassword,
+//            views.edtEmail      to views.hitEmail,
+//            views.edtPassword   to views.hitPassword,
         )
 
         views.btnLogin.setOnClickListener {
@@ -31,6 +33,7 @@ class LoginActivity : AppCompatActivity() {
             }
 
             if (!hasError) {
+                Storage.account = views.edtEmail.text.toString()
                 val intent = Intent(this, SelectActivity::class.java)
                 startActivity(intent)
             }

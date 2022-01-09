@@ -33,16 +33,32 @@
                 android:orientation="vertical"
                 android:layoutDirection="ltr" >
 
-                <ImageView
+                <RelativeLayout
+                    android:id="@+id/profilePicture"
                     android:layout_width="96dp"
-                    android:layout_height="96dp"
-                    android:src="@drawable/ic_launcher_foreground" />
+                    android:layout_height="96dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/grandma"/>
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/ic_gear"
+                        app:tint="@color/white"/>
+                </RelativeLayout>
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:id="@+id/txvMemberName"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textColor="@color/white"
-                    android:text="Member name" />
+                    android:gravity="center"
+                    android:text="@string/app_name" />
 
             </LinearLayout>
 
@@ -75,7 +91,7 @@
                         android:id="@+id/txvAccount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"/>
 
                 </LinearLayout>
             </LinearLayout>
@@ -90,20 +106,23 @@
             <LinearLayout
                 android:id="@+id/btnNormal"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="0dp"
                 android:layout_weight="1"
                 android:orientation="horizontal"
                 android:gravity="center"
-                android:background="@color/gray">
+                android:background="@drawable/rounded_panel_16"
+                android:backgroundTint="@color/gray">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_launcher_foreground"/>
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_normal_taxi"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:gravity="center"
                     android:textSize="24sp"
                     android:text="@string/normal_taxi"/>
@@ -117,46 +136,29 @@
             <LinearLayout
                 android:id="@+id/btnAccessibility"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="0dp"
                 android:layout_weight="1"
                 android:orientation="horizontal"
                 android:gravity="center"
-                android:background="@color/gray">
+                android:background="@drawable/rounded_panel_16"
+                android:backgroundTint="@color/gray">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_launcher_foreground"/>
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_accessibility_taxi"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:gravity="center"
                     android:textSize="24sp"
                     android:text="@string/accessibility_taxi"/>
 
             </LinearLayout>
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="16dp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:background="@color/gray">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:textSize="18sp"
-                    android:text="@string/check_list"/>
-
-            </LinearLayout>
 
         </LinearLayout>
 

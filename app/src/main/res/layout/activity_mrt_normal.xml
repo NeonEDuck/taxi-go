@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MrtActivity">
+    tools:context=".MrtNormalActivity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -36,29 +36,29 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                        <RelativeLayout
-                            android:id="@+id/linearLayout"
-                            android:layout_width="3840px"
-                            android:layout_height="5144px"
-                            android:background="@drawable/mrt_map">
+                    <RelativeLayout
+                        android:id="@+id/linearLayout"
+                        android:layout_width="3840px"
+                        android:layout_height="5144px"
+                        android:background="@drawable/mrt_map">
 
-                            <Button
-                                android:id="@+id/btnTaipeiStation"
-                                android:layout_width="140px"
-                                android:layout_height="140px"
-                                android:layout_marginLeft="1520px"
-                                android:layout_marginTop="2970px"
-                                android:background="#0000ff00"/>
+                        <Button
+                            android:id="@+id/btnTaipeiStation"
+                            android:layout_width="140px"
+                            android:layout_height="140px"
+                            android:layout_marginLeft="1520px"
+                            android:layout_marginTop="2970px"
+                            android:background="#0000ff00"/>
 
-                            <Button
-                                android:id="@+id/btnXinsheng"
-                                android:layout_width="140px"
-                                android:layout_height="140px"
-                                android:layout_marginLeft="1920px"
-                                android:layout_marginTop="2970px"
-                                android:background="#0000ff00"/>
+                        <Button
+                            android:id="@+id/btnXinsheng"
+                            android:layout_width="140px"
+                            android:layout_height="140px"
+                            android:layout_marginLeft="1920px"
+                            android:layout_marginTop="2970px"
+                            android:background="#0000ff00"/>
 
-                        </RelativeLayout>
+                    </RelativeLayout>
 
                 </ScrollView>
             </HorizontalScrollView>
@@ -75,32 +75,6 @@
                 android:background="@drawable/rounded_panel_16">
 
                 <LinearLayout
-                    android:id="@+id/lahOrigin"
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:orientation="horizontal"
-                    android:background="@drawable/rounded_panel_16">
-
-                    <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:padding="8dp"
-                        android:src="@drawable/ic_origin" />
-
-                    <TextView
-                        android:id="@+id/txvOrigin"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center|start"
-                        android:text="@string/placeholder_origin"/>
-
-                </LinearLayout>
-
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="8dp"/>
-
-                <LinearLayout
                     android:id="@+id/lahDestination"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
@@ -110,14 +84,14 @@
                         android:layout_width="48dp"
                         android:layout_height="48dp"
                         android:padding="8dp"
-                        android:src="@drawable/ic_destination"/>
+                        android:src="@drawable/ic_origin"/>
 
                     <TextView
                         android:id="@+id/txvDestination"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center|start"
-                        android:text="@string/placeholder_destination"/>
+                        android:text="@string/placeholder_station"/>
 
                 </LinearLayout>
 
@@ -140,14 +114,7 @@
                         android:layout_height="48dp"
                         android:background="@drawable/rounded_button"
                         android:textSize="16sp"
-                        android:text="@string/order"/>
-
-                    <TextView
-                        android:id="@+id/txvTime"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center|start"
-                        android:layout_marginEnd="48dp"/>
+                        android:text="@string/call"/>
 
                 </LinearLayout>
 

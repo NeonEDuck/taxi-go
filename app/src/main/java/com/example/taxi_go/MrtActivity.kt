@@ -9,12 +9,12 @@ import android.widget.LinearLayout
 import com.example.taxi_go.databinding.ActivityMrtBinding
 import androidx.core.app.NavUtils
 
-
-
-
 const val ORIGIN_ID = "originId"
 const val DESTINATION_ID = "destinationId"
 const val INTERVAL_ID = "intervalId"
+const val DATE_ID = "dateId"
+const val TIME_BEFORE_ID = "timeBeforeId"
+const val TIME_AFTER_ID = "timeAfterId"
 
 class MrtActivity : AppCompatActivity() {
     enum class Options {
@@ -116,6 +116,5 @@ class MrtActivity : AppCompatActivity() {
         } else{
             0
         }
-
     }
 }
